@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=0.95">
 <meta name="theme-color" content="#174c3c">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Liftlog">
@@ -78,6 +78,22 @@
 .programme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;padding:8px 0}.programme-tile{width:100%;min-height:135px;text-align:left;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink);box-shadow:var(--shadow);transition:transform .15s,border-color .15s}.programme-tile:hover{transform:translateY(-2px);border-color:#b9d4c5}.programme-tile strong{display:block;font-size:20px;letter-spacing:-.025em}.programme-tile span{display:block;color:var(--muted);font-size:13px;margin-top:9px}.overview-heading{display:flex;align-items:center;gap:14px;margin:8px 0 18px}.overview-heading h1{font-size:28px;margin:0}.overview-summary{grid-template-columns:1fr auto}.overview-summary p{margin:0;color:var(--muted);font-size:13px}
 
 @media(max-width:600px){.programme-grid{grid-template-columns:1fr;gap:10px;padding:2px 0}.programme-tile{min-height:88px;padding:16px}.programme-tile strong{font-size:17px}.overview-heading{gap:9px;margin:4px 0 12px;flex-wrap:wrap}.overview-heading h1{font-size:21px}.overview-summary{grid-template-columns:1fr;gap:10px}.overview-summary .weightbox{width:100%}}
+
+@media(max-width:600px){
+  .done-cell,.btn,.link,.daytab{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  #adminUsers .table,#adminProgrammes .table{width:100%;min-width:0;table-layout:fixed}
+  #adminUsers .table th:nth-child(3),#adminUsers .table td:nth-child(3),#adminUsers .table th:nth-child(4),#adminUsers .table td:nth-child(4){display:none}
+  #adminUsers .table th:nth-child(1),#adminUsers .table td:nth-child(1){width:38%}
+  #adminUsers .table th:nth-child(2),#adminUsers .table td:nth-child(2){width:20%}
+  #adminUsers .table th:nth-child(5),#adminUsers .table td:nth-child(5){width:42%;white-space:nowrap}
+  #adminUsers .table td:last-child .btn{font-size:10px;padding:6px 7px}
+  #adminProgrammes .table th:nth-child(2),#adminProgrammes .table td:nth-child(2),#adminProgrammes .table th:nth-child(3),#adminProgrammes .table td:nth-child(3){display:none}
+  #adminProgrammes .table th:first-child,#adminProgrammes .table td:first-child{width:68%}
+  #adminProgrammes .table th:last-child,#adminProgrammes .table td:last-child{width:32%}
+  #adminProgrammes [data-export-program],#adminProgrammes [data-import-program],#adminProgrammes [data-remove="program"]{display:none}
+  #adminProgrammes [data-edit="program"]{font-size:11px;padding:6px 9px}
+}
+
 </style>
 </head>
 <body>
